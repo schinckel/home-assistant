@@ -501,6 +501,14 @@ OHMPILOT_ENTITY_DESCRIPTIONS: list[FroniusSensorEntityDescription] = [
 
 POWER_FLOW_ENTITY_DESCRIPTIONS: list[FroniusSensorEntityDescription] = [
     FroniusSensorEntityDescription(
+        key="backup_mode",
+        entity_category=EntityCategory.DIAGNOSTIC,
+    ),
+    FroniusSensorEntityDescription(
+        key="battery_standby",
+        entity_category=EntityCategory.DIAGNOSTIC,
+    ),    
+    FroniusSensorEntityDescription(
         key="energy_day",
         native_unit_of_measurement=UnitOfEnergy.WATT_HOUR,
         device_class=SensorDeviceClass.ENERGY,
